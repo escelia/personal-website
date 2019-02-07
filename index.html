@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url('me3.jpg');
+
+  /* Full height <div style="position:relative;top:50px;left:1000px;width:300px;background-color:#6b96db;font-size:36px;padding:20px"> */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.secondpar {
+    background-image: url('me2.jpg');
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.centered {
+    position: absolute;
+    width: 200px;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.welcome
+{
+    position: relative;
+    left: 800px;
+    height: 97.5%;
+    width: 30%;
+    background-color: rgb(92, 76, 138, 0.7);
+    padding: 10px;
+}
+
+.welcometext
+{
+    color: white;
+    font-size: 85px;
+    font-family: "Goudy Old Style",Garamond,"Big Caslon","Times New Roman",serif;
+    margin: 0;
+    text-align: center;
+    margin-top: 20px;
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+.welcomepretext
+{
+    color: white;
+    font-size: 40px;
+    font-family: "Goudy Old Style",Garamond,"Big Caslon","Times New Roman",serif;
+    margin: 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.typewriter p {
+  color: white;
+  font-size: 18px;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin-top: 20px; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+.linkedin {
+
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #4A1622}
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .welcome, .welcometext, .welcomepretext {
+    width:100%;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="parallax">
+    <div class="welcome">
+        <p class="welcomepretext">Hi! I'm</p><p class="welcometext">Elia Anagnostou</p>
+        <div class="typewriter"><p>Info about me here</p></div>
+    </div>
+</div>
+
+<div style="height:150px;background-color:white">
+</div>
+
+<div class="secondpar">
+    <div>
+        <a href="https://www.linkedin.com/in/elia-anagnostou-bb0341162/">
+        <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="linkedin.png" style="margin-top:60px;margin-left:100px" width="7%" height="7%">
+        </a>
+    </div>
+    <div>
+        <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="facebook.png" style="margin-top:-25px;margin-left:90%" width="7%" height="7%">
+    </div>
+    
+</div>
+
+<script>
+function bigImg(x) {
+  x.style.height = "9%";
+  x.style.width = "9%";
+  x.style.top = "15px";
+  x.style.left = "93px";        
+}
+
+function normalImg(x) {
+  x.style.height = "7%";
+  x.style.width = "7%";
+}
+</script>
+
+</body>
+</html>
