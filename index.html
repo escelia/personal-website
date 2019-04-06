@@ -1,183 +1,136 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body, html {
-  height: 100%;
-}
-
-.parallax {
-  /* The image used */
-  background-image: url('me3.jpg');
-
-  /* Full height <div style="position:relative;top:50px;left:1000px;width:300px;background-color:#6b96db;font-size:36px;padding:20px"> */
-  height: 100%; 
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.secondpar {
-    background-image: url('me2.jpg');
-    height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.centered {
-    position: absolute;
-    width: 200px;
-    padding-top: 50%;
-    padding-left: 80%;
-    transform: translate(-50%, -50%);
-}
-
-.welcome
-{
-    position: relative;
-    left: 800px;
-    height: 97.5%;
-    width: 30%;
-    background-color: rgb(92, 76, 138, 0.7);
-    padding: 10px;
-}
-
-.welcometext
-{
-    color: white;
-    font-size: 85px;
-    /*font-size: 10vw;*/
-    font-family: "Goudy Old Style",Garamond,"Big Caslon","Times New Roman",serif;
-    margin: 0;
-    text-align: center;
-    padding-top: 20px;
-    padding-right: 10px;
-    padding-left: 10px;
-    animation-name: example;
-    animation-duration: 4s;
-}
-
-.welcomepretext
-{
-    color: white;
-    font-size: 40px;
-    /*font-size:10vw;*/
-    font-family: "Goudy Old Style",Garamond,"Big Caslon","Times New Roman",serif;
-    margin: 0;
-    text-align: center;
-    padding-top: 50px;
-}
-
-.typewriter p {
-  color: white;
-  font-size: 18px;
-  font-family: monospace;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  padding-top: 20px; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 3.5s steps(30, end),
-    blink-caret .5s step-end infinite;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #4A1622}
-}
-
-@media only screen and (max-device-width: 1366px) {
-  .parallax {
-    background-attachment: scroll;
-  }
-}
-
-@media only screen and (max-width:620px) {
-  /* For mobile phones: */
-  .welcome {
-    position: relative;
-    left: 50px;
-    height: 97.5%;
-    width: 30%;
-    background-color: rgb(92, 76, 138, 0.7);
-    padding: 10px;
-  }
-}
-
-@media only screen and (max-width:620px) {
-  .welcometext {
-    color: white;
-    font-size: 20px;
-    font-family: "Goudy Old Style",Garamond,"Big Caslon","Times New Roman",serif;
-    margin: 0;
-    text-align: center;
-    margin-top: 20px;
-    animation-name: example;
-    animation-duration: 4s;
-  }  
-}
-  
-@media only screen and (max-width:620px) {
-  .welcomepretext {
-    color: white;
-    font-size: 12px;
-    font-family: "Goudy Old Style",Garamond,"Big Caslon","Times New Roman",serif;
-    margin: 0;
-    text-align: center;
-    margin-top: 50px;
-  }  
-}
-
-</style>
+  <title>Elia Anagnostou</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 </head>
-<body>
+  <style>
+  body {
+      position: relative; 
+  }
+  #section1 {padding-top:50px;height:800px;color: #fff; background-image: url('me3.jpg');background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; position: relative;}
+  #section3 {padding-top:50px;height:800px;color: #fff; background-image: url('me2.jpg');background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;}
+  #section2 {padding-top:50px;height:100px;color: #fff; background-color: #ffffff;}
+  #section41 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
+  #section42 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
 
-<div class="parallax">
-    <div class="welcome">
-        <p class="welcomepretext">Hi! I'm</p><p class="welcometext">Elia Anagnostou</p>
-        <div class="typewriter"><p>Info about me here</p></div>
+  div.transbox {
+  position: absolute;
+  top: 100px;
+  right: 30px;
+  height: 80%;
+  width: 44%;
+  background-color: rgb(92, 76, 138, 0.7);
+  border: 1px solid black;
+  }
+
+  div.transbox p {
+      margin: 5%;
+      color: #ffffff;
+      font-size: 2vw;
+  }
+
+  @media only screen and (max-width:560px) {
+    div.transbox {
+      position: absolute;
+      top: 100px;
+      height: 80%;
+      width: 80%;
+      background-color: rgb(92, 76, 138, 0.7);
+      border: 1px solid black;
+    }
+  }
+  @media only screen and (max-width:560px) {
+    div.transbox p {
+      margin: 5%;
+      color: #ffffff;
+      font-size: 5vw;
+    }
+  }
+
+  h1 {
+    margin: 5%;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 6vw;
+  }
+
+  @media only screen and (max-width:560px) {
+  h1 {
+    margin: 5%;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 13vw;
+  }
+  }
+
+  h1, h3 {
+    margin: 5%;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Elia Anagnostou</a>
     </div>
-</div>
-
-<div style="height:150px;background-color:white">
-</div>
-
-<div class="secondpar">
     <div>
-        <a href="https://www.linkedin.com/in/elia-anagnostou-bb0341162/">
-        <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="linkedin.png" style="margin-top:60px;margin-left:100px" width="7%" height="7%">
-        </a>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#section1">Welcome</a></li>
+          <li><a href="#section3">About me</a></li>
+          <li><a href="#section4">Experience</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#section41">Project 1</a></li>
+              <li><a href="#section42">Project 2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-    
+  </div>
+</nav>    
+
+<div id="section1" class="container-fluid">
+  <div class="transbox">
+  <h3> Hi! I'm </h3>
+  <h1 class="display-1"> Elia Anagnostou </h1>
+  <p >Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  </div>
 </div>
-
-<script>
-function bigImg(x) {
-  x.style.height = "9%";
-  x.style.width = "9%";
-  x.style.top = "15px";
-  x.style.left = "93px";        
-}
-
-function normalImg(x) {
-  x.style.height = "7%";
-  x.style.width = "7%";
-}
-</script>
+<div id="section2" class="container-fluid">
+</div>
+<div id="section3" class="container-fluid">
+  <h1 class="display-1"><mark>Section 3</mark></h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+<div id="section41" class="container-fluid">
+  <h1>Section 4 Submenu 1</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+<div id="section42" class="container-fluid">
+  <h1>Section 4 Submenu 2</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
 
 </body>
 </html>
