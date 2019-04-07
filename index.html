@@ -13,45 +13,79 @@
   body {
       position: relative; 
   }
-  #section1 {padding-top:50px;height:800px;color: #fff; background-image: url('me3.jpg');background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; position: relative;}
-  #section3 {padding-top:50px;height:800px;color: #fff; background-image: url('me2.jpg');background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;}
+  #section1 {padding-top:50px;height:850px;color: #fff; background-image: url('me3.jpg');background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; position: relative;}
+  #section3 {padding-top:50px;height:850px;color: #fff; background-image: url('me2.jpg');background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;}
   #section2 {padding-top:50px;height:100px;color: #fff; background-color: #ffffff;}
   #section5 {padding-top:50px;height:500px;color: #fff; background-color: #000293;}
   #section41 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
   #section42 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
 
   div.transbox {
-  position: absolute;
-  top: 100px;
-  right: 30px;
-  height: 80%;
-  width: 44%;
-  background-color: rgba(92, 76, 138, 0.7);
-  border: 1px solid black;
+    float: right;
+    margin-top: 30px;
+    margin-right: 20px;
+    height: 92%;
+    width: 44%;
+    background-color: rgba(92, 76, 138, 0.7);
+    border: 1px solid black;
+  }
+
+  div.transbox_later {
+    float: right;
+    margin-top: -10px;
+    margin-right: 20px;
+    height: 97%;
+    width: 44%;
+    background-color: rgba(92, 76, 138, 0.7);
+    border: 1px solid black;
   }
 
   div.transbox p {
-      margin: 5%;
-      color: #ffffff;
-      font-size: 2vw;
+    margin: 5%;
+    color: #ffffff;
+    font-size: 2vw;
+  }
+
+  div.transbox_later p {
+    margin: 5%;
+    color: #ffffff;
+    font-size: 1.5vw;
   }
 
   @media only screen and (max-width:560px) {
     div.transbox {
-      position: absolute;
-      top: 100px;
-      height: 80%;
+      margin-top: 30px;
+      height: 92%;
       width: 80%;
       background-color: rgba(92, 76, 138, 0.7);
       border: 1px solid black;
     }
   }
+
+  @media only screen and (max-width:560px) {
+  div.transbox_later {
+      margin-top: -10px;
+      height: 97%;
+      width: 80%;
+      background-color: rgba(92, 76, 138, 0.7);
+      border: 1px solid black;
+    }
+  }
+
   @media only screen and (max-width:560px) {
     div.transbox p {
       margin: 5%;
       color: #ffffff;
       font-size: 5vw;
     }
+  }
+
+  @media only screen and (max-width:560px) {
+    div.transbox_later p {
+        margin: 5%;
+        color: #ffffff;
+        font-size: 3vw;
+      }
   }
 
   h1 {
@@ -90,14 +124,26 @@
     }
   }
 
-  .btn-primary span {
+  .img-res {
+    margin: 5%;
+    height: 20%;
+    width: auto;
+  }
+
+  @media only screen and (max-width:630px) {
+    #img-center {
+      .col-lg-12 text-center;
+    }
+  }
+
+  .btn-primary spany {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
   }
 
-  .btn-primary span:after {
+  .btn-primary spany:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -106,11 +152,11 @@
     transition: 0.5s;
   }
 
-  .btn-primary:hover span {
+  .btn-primary:hover spany {
     padding-right: 25px;
   }
 
-  .btn-primary:hover span:after {
+  .btn-primary:hover spany:after {
     opacity: 1;
     right: 0;
   }
@@ -138,7 +184,7 @@
           <li><a href="#section1">About Me</a></li>
           <li><a href="#section3">Experience</a></li>
           <li><a href="#section5">Education</a></li>
-          <li><a href="#section4">Projects</a></li>
+          <li><a href="#section4">Values</a></li>
           <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#section41">Project 1</a></li>
@@ -153,23 +199,30 @@
 
 <div id="section1" class="container-fluid">
   <div class="transbox">
-  <h3> Hi! I'm </h3>
-  <h1> Elia Anagnostou </h1>
-  <p class="text-center" style="line-height:1.8;"><span class="glyphicon glyphicon-chevron-right"></span> CS @ Bryn Mawr College <br><span class="glyphicon glyphicon-chevron-right"></span>Incoming Software Engineer Intern @ Blueground Co <br><span class="glyphicon glyphicon-chevron-right"></span> Graduating May 2021 <br><span class="glyphicon glyphicon-chevron-right"></span> From Athens, Greece <br> </p> 
-  <div class="col-lg-12 text-center">
-  <a href="https://www.linkedin.com/in/elia-anagnostou-bb0341162/">
-  <button type="button" class="btn btn-primary btn-lg btn-space"><span class="glyphicon glyphicon-user"></span> My LinkedIn</button>
-  </a>
-  <button type="button" class="btn btn-primary btn-lg btn-space"><span class="glyphicon glyphicon-file"></span> My Resume</button>
-  </div>
+    <h3> Hi! I'm </h3>
+    <h1> Elia Anagnostou </h1>
+    <p class="text-center" style="line-height:1.8;"><span class="glyphicon glyphicon-chevron-right"></span> CS @ Bryn Mawr College <br><span class="glyphicon glyphicon-chevron-right"></span>Incoming Software Engineer Intern @ Blueground Co <br><span class="glyphicon glyphicon-chevron-right"></span> Graduating May 2021 <br><span class="glyphicon glyphicon-chevron-right"></span> From Athens, Greece <br> </p> 
+    <div class="col-lg-12 text-center">
+      <a href="https://www.linkedin.com/in/elia-anagnostou-bb0341162/">
+      <button type="button" class="btn btn-primary btn-lg btn-space"><spany><span class="glyphicon glyphicon-user"></span> LinkedIn</spany></button>
+      </a>
+      <button type="button" class="btn btn-primary btn-lg btn-space"><spany><span class="glyphicon glyphicon-file"></span> Resume</spany></button>
+    </div>
+    <div class="col-lg-12 text-center">
+      <button type="button" class="btn btn-primary btn-lg btn-space"><spany><span class="glyphicon glyphicon-paperclip"></span> Github</spany></button>
+      <button type="button" class="btn btn-primary btn-lg btn-space"><spany><span class="glyphicon glyphicon-pencil"></span> StackOverflow</spany></button>
+    </div>
   </div>
 </div>
 <div id="section2" class="container-fluid">
 </div>
 <div id="section3" class="container-fluid">
-  <h1><mark>Section 3</mark></h1>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <div class="transbox_later">
+    <h1>Where I've Worked</h1>
+      <img src="lits.jpeg" class="img-res">
+    
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  </div>
 </div>
 <div id="section5" class="container-fluid">
   <p>bryn maaawr</p>
